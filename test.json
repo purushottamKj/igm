@@ -1,0 +1,191 @@
+{
+  "context":
+   {
+      "domain": "nic2004:52110",
+      "country": "IND",
+      "city": "std:080",
+      "action": "issue",
+      "core_version": "1.0.0",
+      "bap_id": "ondc.bap.com",
+      "bap_uri": "https://abc.interfacing.app.com/ondc",
+      "bpp_id": "ondc.bpp.com",
+      "bpp_uri": "https://abc.transaction.counterpary.app.com/ondc",
+      "transaction_id": "6baa811a-6cbe-4ad3-94e9-cbf96aaff343",
+      "message_id": "5abb922b-6cbe-4ad3-94e9-cbf96bbff343",
+      "timestamp": "2022-10-28T10:34:58.469Z",
+      "ttl": "PT2H"
+   },
+   "message": 
+   {
+      "issue":
+      {
+        "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "complainant_info":
+        {
+          "person":
+          {
+            "name": "Sam Manuel"
+          },
+          "contact":
+          {       
+            "phone": "9879879870",
+            "email": "sam@yahoo.com"
+          }
+        },
+        "order_details":
+        {
+          "id": "785390e0-a835-11ed-afa1-0242ac120002",
+          "state": "Completed",
+          "items": [
+            {
+              "id": "23433"
+            }
+          ],
+          "fulfillments": [ 
+            {
+              "id": "Fulfillment1",
+              "state": "Order-delivered"
+            }    
+          ],
+          "provider_id": "P1",
+          "merchan_torder__id": "101"
+        },
+        "description":
+        {
+          "short_desc": "product is duplicate",
+          "long_desc": "the product appears to be of bad quality",
+          "additional_desc": {
+            "url": "https://link-to-assests.buyer.com/product-imag.img",
+            "content_type": "text/plain"
+          },
+          "images": [
+            "http://interfacing.app/addtional-details/img1.png",
+            "http://interfacing.app/addtional-details/img2.png"
+          ]
+        },
+        "category": "ITEM",
+        "sub_category": "ITM01",
+        "issue_type": "ISSUE",
+        "source": {
+          "network_participant_id": "https://abc.interfacing.app.com",
+          "issue_source_type": "CONSUMER"
+        },
+        "expected_response_time": {
+          "duration": "PT2H"
+        },
+        "expected_resolution_time": {
+          "duration": "P1D"
+        },
+        "status": "OPEN",
+        "issue_actions":
+        {
+          "complainant_actions":
+          [
+          {
+            "complainant_action": "OPEN",
+            "remarks": "Complaint created",
+            "updated_at": "2022-10-28T10:34:58.469Z",
+            "updated_by": 
+            {
+              "org":
+              {
+                "name": "ondc.bap.com+nic2004:52110"
+              },
+              "contact":
+              {
+                "phone": "9450394039",
+                "email": "interfacingapp@interface.com"
+              },
+              "person":
+              {
+                "name": "John Doe"
+              }
+            }
+          }
+          ],
+          "respondent_actions":
+          [
+          {
+            "respondent_action": "RESOLVED",
+            "remarks": "Complaint resolved",
+            "updated_at": "2022-10-28T12:34:58.368Z",
+            "updated_by":
+            {
+              "org":
+              {
+                "name": "ondc.bpp.com+nic2004:52110"
+              },
+              "contact":
+              {
+                "phone": "9450394140",
+                "email": "respondentapp@respond.com"
+              },
+              "person":
+              {
+                "name": "Jane Doe"
+              }
+            },
+            "cascaded_level":1
+          }
+          ]
+        },
+        "created_at": "2022-12-04T05:28:11.320Z",
+        "updated_at": "2022-12-04T05:28:11.320Z",
+        "finalized_odr": 
+        {
+          "name": "ODR provider name",
+          "about_info": "information about the ODR provider",
+          "url": "https://info.odrprovider.com/",
+          "organization":
+          {
+            "org":
+            {
+              "name": "ODR provider"
+            },
+            "contact":
+            {
+              "name": "ODR provider contact name",
+              "phone": "0495049304",
+              "email": "email@odr.com"
+            },
+            "person":
+            {
+              "name": "odr provider contact  person name"
+            }
+          },
+          "pricing_model":
+          {
+            "price":
+            {
+              "currency": "INR",
+              "value": "10000"
+            },
+            "pricing_info": "10% of issue cost"
+          },
+          "resolution_ratings":
+          {
+            "rating_value": "98%"
+          }
+        },
+        "rating": "THUMBS-UP",
+        "additional_info_required": [
+        {
+          "info_provided": 
+          {
+            "description":
+            {
+              "short_desc": "Information provided",
+              "long_desc": "Detailed description of the information provided by the respondent",
+              "images": [
+                "http://interfacing.app/addtional-details/img.png"
+              ]
+            },
+            "updated_at": "2022-10-28T10:34:58.469Z",
+            "message_id": "6bcc033c-6cbe-4ad3-94e9-cbf96bbff454"
+          }
+        }
+        ]
+      }
+    }
+  }
+  
