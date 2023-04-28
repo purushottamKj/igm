@@ -1,5 +1,9 @@
 import { Router } from "express";
-import { getIssue, postIssue } from "../controllers/issuecontrollers.js";
+import {
+  getIssue,
+  postIssue,
+  getById,
+} from "../controllers/issuecontrollers.js";
 import { onIssue } from "../controllers/onIssueControllers.js";
 import { on_issue_status } from "../controllers/on_issue_status.js";
 const router = Router();
@@ -14,6 +18,10 @@ router.get("/issuedata", (req, res) => {
   getIssue(req, res);
 });
 
+// get by id issue data
+router.get("/getById/:issue_id", (req, res) => {
+  getById(req, res);
+});
 //on_issue data post
 router.post("/on_issue", (req, res) => {
   onIssue(req, res);

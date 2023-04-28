@@ -251,3 +251,15 @@ export const getIssue = async (req, res) => {
     console.log(err);
   }
 };
+export const getById = async (req, res) => {
+  try {
+    const issue_id = req.params.issue_id;
+    const data = await IssueTable.findAll({
+      attributes: ["context", "message"],
+      where: { issue_id },
+    });
+    res.status(200).json({ message: "success", data: data });
+  } catch (err) {
+    console.log(err);
+  }
+};

@@ -50,8 +50,6 @@ export const on_issue_status = async (req, res) => {
       message[0].issue.issue_actions.respondent_actions[0].updated_by.person
         .name;
 
-    console.log(phone);
-
     const created_at = message[0].issue.created_at;
     const updated_at = message[0].issue.updated_at;
 
