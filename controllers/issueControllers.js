@@ -4,6 +4,7 @@ import IssueTable from "../models/newIssueModel.js";
 
 export const postIssue = async (req, res) => {
   try {
+    // req data form body
     const {
       domain,
       country,
@@ -135,6 +136,7 @@ export const postIssue = async (req, res) => {
 
     // console.log(additional_info_required_message_id);
 
+    //  <<<<<<<<<<<<----------create data for issue------------>>>>>>>>>>>>>>
     const IssueData = await IssueTable.create({
       context: {
         domain,
@@ -238,7 +240,14 @@ export const postIssue = async (req, res) => {
   }
 };
 
+// <<<<<<<<<<------------------get all issue data------------------>>>>>>>>>>>>>>>>
 export const getIssue = async (req, res) => {
-  const data = await IssueTable.findAll({ attributes: ["context", "message"] });
-  res.status(200).json({ message: "success", data: data });
+  try {
+    const data = await IssueTable.findAll({
+      attributes: ["context", "message"],
+    });
+    res.status(200).json({ message: "success", data: data });
+  } catch (err) {
+    console.log(err);
+  }
 };

@@ -2,9 +2,7 @@ import { Router } from "express";
 import { getIssue, postIssue } from "../controllers/issuecontrollers.js";
 import { onIssue } from "../controllers/onIssueControllers.js";
 import { on_issue_status } from "../controllers/on_issue_status.js";
-// import cors from "cors";
 const router = Router();
-// app.use(cors());
 
 // Post issue Data
 router.post("/issue", (req, res) => {
@@ -13,7 +11,6 @@ router.post("/issue", (req, res) => {
 
 // get issue data
 router.get("/issuedata", (req, res) => {
-  
   getIssue(req, res);
 });
 
